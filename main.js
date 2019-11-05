@@ -1,3 +1,5 @@
 var openButton = document.getElementById('openButton');
 
-console.log(openButton);
+openButton.addEventListener('click', function() {
+  console.log('clicked!');
+});
