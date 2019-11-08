@@ -1,7 +1,10 @@
 // Modal class
 function Modal(el) {
   this.el = el;
-  this.el.querySelector('#overlay').addEventListener('click', this.close.bind(this));
+  var closeElements = this.el.getElementsByClassName('close');
+  for (var i = 0; i < closeElements.length; i++) {
+    closeElements[i].addEventListener('click', this.close.bind(this));
+  }
 }
 
 Modal.prototype.open = function() {
